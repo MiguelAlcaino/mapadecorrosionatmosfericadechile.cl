@@ -14,7 +14,7 @@ apps.zip
 # ── Imágenes / datos (viven en el servidor, no en git) ──
 /public_html/uploads/
 /public_html/imagenes/
-/public_html/images/
+/public_html/images/mapas/
 
 # ── SENSIBLE: credenciales ──
 /config/databases.yml
