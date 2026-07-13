@@ -1,0 +1,229 @@
+Estacion:
+  connection: doctrine
+  tableName: estacion
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    identificador:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    nombre_estacion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    latitud:
+      type: float()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    longitud:
+      type: float()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    altura:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    distancia_al_mar:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    region:
+      type: enum(55)
+      fixed: false
+      unsigned: false
+      values:
+        - 'I REGIÓN DE TARAPACÁ'
+        - 'II REGIÓN DE ANTOFAGASTA'
+        - 'III REGIÓN DE ATACAMA'
+        - 'IV REGIÓN DE COQUIMBO'
+        - 'V REGIÓN DE VALPARAISO'
+        - 'VI REGIÓN DEL LIBERTADOR GENERAL BERNARDO O''HIGGINS'
+        - 'VII REGIÓN DEL MAULE'
+        - 'VIII REGIÓN DEL BÍO - BÍO'
+        - 'IX REGIÓN DE LA ARAUCANÍA'
+        - 'X REGIÓN DE LOS LAGOS'
+        - 'XI REGIÓN AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO'
+        - 'XII REGIÓN DE MAGALLANES Y LA ANTÁRTICA CHILENA'
+        - 'RM REGIÓN METROPOLITANA'
+        - 'XIV REGION DE LOS RÍOS'
+        - 'XV REGIÓN DE ARICA Y PARINACOTA'
+      primary: false
+      notnull: true
+      autoincrement: false
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    color:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: white
+      notnull: false
+      autoincrement: false
+    alto:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '16'
+      notnull: false
+      autoincrement: false
+    ancho:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '16'
+      notnull: false
+      autoincrement: false
+  relations:
+    Fotos:
+      local: id
+      foreign: estacion
+      type: many
+    Mediciones:
+      local: id
+      foreign: estacion
+      type: many
+Fotos:
+  connection: doctrine
+  tableName: fotos
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    estacion:
+      type: integer(8)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: true
+      autoincrement: false
+    foto:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    descripcion:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Estacion:
+      local: estacion
+      foreign: id
+      type: one
+Mediciones:
+  connection: doctrine
+  tableName: mediciones
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: true
+      primary: true
+      autoincrement: true
+    tipo:
+      type: enum(21)
+      fixed: false
+      unsigned: false
+      values:
+        - Cloruro
+        - Sulfato
+        - Humidificacion
+        - Velocidad_aluminio
+        - Velocidad_acero
+        - Velocidad_cobre
+        - Velocidad_galvanizado
+      primary: false
+      notnull: true
+      autoincrement: false
+    mes:
+      type: enum(10)
+      fixed: false
+      unsigned: false
+      values:
+        - Enero
+        - Febrero
+        - Marzo
+        - Abril
+        - Mayo
+        - Junio
+        - Julio
+        - Agosto
+        - Septiembre
+        - Octubre
+        - Noviembre
+        - Diciembre
+      primary: false
+      notnull: true
+      autoincrement: false
+    anio:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    estacion:
+      type: integer(8)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: true
+      autoincrement: false
+    valor:
+      type: float(18)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    observaciones:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Estacion:
+      local: estacion
+      foreign: id
+      type: one

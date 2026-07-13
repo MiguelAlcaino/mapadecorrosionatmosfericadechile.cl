@@ -1,0 +1,45 @@
+# ── Symfony 1.x: runtime ──
+/cache/
+/log/
+/logs/
+/tmp/
+
+# ── Backups / archivos enormes ──
+apps.zip
+*.zip
+*.tar
+*.tar.gz
+*.gz
+
+# ── Imágenes / datos (viven en el servidor, no en git) ──
+/public_html/uploads/
+/public_html/imagenes/
+/public_html/images/
+
+# ── SENSIBLE: credenciales ──
+/config/databases.yml
+/config/properties.ini
+
+# ── Cruft de cPanel / servidor ──
+/access-logs/
+/ssl/
+/etc/
+/perl5/
+/data/sql/
+cpbackup-exclude.conf
+dailyreport_off
+delay_spam_lover
+s_imapstatus
+
+# ── Logs sueltos ──
+error_log
+**/error_log
+*.log
+
+# ── SO / editor ──
+.DS_Store
+Thumbs.db
+*.sw?
+*~
+.idea/
+.vscode/

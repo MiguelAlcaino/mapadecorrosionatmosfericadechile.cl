@@ -1,0 +1,74 @@
+#galeria
+{
+font-weight: bold;
+}
+#galeria a
+{
+margin-left:5px;
+margin-right:5px;
+}
+
+	 .mapa
+	 {
+	    width:  47%;
+	    height: 100%;
+	    border: 1px solid #ccc;
+	    float: left;
+        height: 600px !important;	    
+	}
+	.galeriaP
+	{
+	  background-color: #F2F2F2;
+	  //height: 980px;
+	  height: 100%;
+	  width: 47%;
+	  float:right;
+	margin-left: 20px;
+	padding: 10px;
+	border: 1px solid #777;
+text-align : left;
+	}
+.container {
+    margin: 0 auto !important; 
+    text-align: center; 
+    
+    height: 100%;		
+}
+	body {
+		font: 80% verdana, arial, helvetica, sans-serif;
+		/* for IE */
+	}
+
+#title{
+font:bold 120% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;
+margin-bottom: 20px;
+}
+
+.titulo
+{
+font:bold 100% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.subtitulo
+{
+font:bold 80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.textbox
+{
+padding: 5px 5px 5px 5px;
+border: 1px solid #BBB;
+background-color: #EEE;
+margin-bottom: 10px;
+text-align: justify;
+}
+.textbox ul
+{
+margin-left: 15px;
+}
+.textbox li
+{
+margin-bottom: 10px;
+}

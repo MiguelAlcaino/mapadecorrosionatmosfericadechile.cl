@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Mapa de corrosión atmosférica de Chile
+    description:  Mapas de corrosión atmosférica en Chile
+    keywords:     mapa, corrosión, atmosférica, Chile
+    language:     es
+    #robots:       index, follow
+
+  stylesheets:    [main.css,  estilo_mapa.css, estilo_galeria.css,jquery.ad-gallery.css, menu_style.css]
+
+  javascripts:    [ jquery.min.js, ../OpenLayers/OpenLayers.js,OpenStreetMap.js, CapasOpenLayers.js, jquery.ad-gallery.js]
+
+  has_layout:     true
+  layout:         layout

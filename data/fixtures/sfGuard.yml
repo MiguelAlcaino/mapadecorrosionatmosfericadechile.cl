@@ -1,0 +1,28 @@
+sfGuardUser:
+  User_admin:
+    first_name:     Rodrigo
+    last_name:      Muñoz
+    email_address:  r.munoz.cornejo@gmail.com
+    username:       admin
+    password:       g10hu4
+    is_super_admin: true
+    Groups:         [Group_admin]
+  User_admin2:
+    first_name:     INNOVA
+    last_name:      
+    email_address:  miguel.alcaino@ogb.cl
+    username:       innova
+    password:       qs2312
+    is_super_admin: true
+    Groups:         [Group_admin]
+
+sfGuardGroup:
+  Group_admin:
+    name:           admin
+    description:    Administrator group
+    Permissions:    [Permission_admin]
+
+sfGuardPermission:
+  Permission_admin:
+    name:           admin
+    description:    Administrator permission
