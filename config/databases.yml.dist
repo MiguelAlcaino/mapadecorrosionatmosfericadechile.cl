@@ -1,0 +1,11 @@
+# Template for the Docker dev environment.
+# Copy to config/databases.yml (git-ignored) before running docker compose:
+#   cp config/databases.yml.dist config/databases.yml
+# Host "db" is the MySQL service defined in docker-compose.yml.
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      'mysql:host=db;dbname=mapadeco_innova'
+      username: mapadeco
+      password: mapadeco

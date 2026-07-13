@@ -36,6 +36,11 @@ error_log
 **/error_log
 *.log
 
+# ── Docker: dump cargado en init + archivos sueltos del transfer ──
+/docker/db/init/
+gitstatus.txt
+config/rsync_exclude.txt
+
 # ── SO / editor ──
 .DS_Store
 Thumbs.db
