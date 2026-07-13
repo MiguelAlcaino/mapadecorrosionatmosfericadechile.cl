@@ -1,7 +1,7 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/vendor/symfony/lib/autoload/sfCoreAutoload.class.php';
-sfCoreAutoload::register();
+// FriendsOfSymfony1 fork (PHP 8.x) loaded via Composer; its autoload.php registers sfCoreAutoload.
+require_once dirname(__FILE__).'/../vendor/autoload.php';
 
 class ProjectConfiguration extends sfProjectConfiguration
 {

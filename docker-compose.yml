@@ -1,7 +1,6 @@
 services:
   nginx:
-    image: nginx:1.10          # match prod (1.10.3): tolerates the malformed header
-    platform: linux/amd64      # from Symfony 1.4's /e-modifier bug on PHP 7.0
+    image: nginx:stable        # fork fixes the /e-modifier header bug, so modern nginx is fine
     ports:
       - "8080:80"
     volumes:
