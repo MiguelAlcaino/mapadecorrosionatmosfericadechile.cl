@@ -14,7 +14,7 @@ apps.zip
 # ── Imágenes / datos (viven en el servidor, no en git) ──
 /public_html/uploads/
 /public_html/imagenes/
-/public_html/images/
+/public_html/images/mapas/
 
 # ── SENSIBLE: credenciales ──
 /config/databases.yml
@@ -36,6 +36,11 @@ error_log
 **/error_log
 *.log
 
+# ── Docker: dump cargado en init + archivos sueltos del transfer ──
+/docker/db/init/
+gitstatus.txt
+config/rsync_exclude.txt
+
 # ── SO / editor ──
 .DS_Store
 Thumbs.db
@@ -43,3 +48,6 @@ Thumbs.db
 *~
 .idea/
 .vscode/
+
+# Composer deps (reproduced via composer install)
+/vendor/

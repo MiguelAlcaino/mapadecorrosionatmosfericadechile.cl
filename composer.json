@@ -1,0 +1,16 @@
+{
+    "name": "ogb/mapa-corrosion",
+    "description": "Mapa de corrosión atmosférica de Chile (symfony 1.x on the FriendsOfSymfony1 fork, PHP 8.x)",
+    "require": {
+        "friendsofsymfony1/symfony1": "^1.5",
+        "friendsofsymfony1/doctrine1": "^1.4"
+    },
+    "config": {
+        "platform": {
+            "php": "8.4"
+        },
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
+    }
+}
