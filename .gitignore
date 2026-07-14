@@ -51,3 +51,6 @@ Thumbs.db
 
 # Composer deps (reproduced via composer install)
 /vendor/
+
+# Override de compose específico por entorno (dev: db en contenedor / prod Pi: db en host)
+/docker-compose.override.yml
